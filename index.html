@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Wanderlust</title>
+    <link rel="stylesheet" type="text/css" href="./reset.css" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Work+Sans"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="./logo.jpg" alt="logo" />
+      <h1>Where do you want to land?</h1>
+    </header>
+    <main>
+        <input type="text" id="city" />
+        <button id="button" type="submit">Submit</button>
+    </main>
+    <div class="container">
+      <div id="destination"></div>
+      <div class="sectiontitle">
+        <h2>WEATHER</h2>
+      </div>
+      <section id="weather">
+        <div class="weather" id="weather1"></div>
+      </section>
+      <div class="sectiontitle">
+        <h2>TOP ATTRACTIONS</h2>
+      </div>
+      <section id="venues"></section>
+    </div>
+
+    <footer></footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./helpers.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
