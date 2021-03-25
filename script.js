@@ -23,8 +23,7 @@ const getVenues = async () => {
         const response = await fetch(urlToFetch);
         if(response.ok){
             const jsonResponse = await response.json();
-			console.log()jsonResponse
-            console.log(jsonResponse)
+			console.log(jsonResponse)
         } else {
             throw new Error("something went wrong")
         }
@@ -34,9 +33,16 @@ const getVenues = async () => {
 }
 //getVenues()
 
-submitBtn.onclick=()=>getVenues();
+//submitBtn.onclick=()=>getVenues();
 
 const getForecast = async () => {
+	const urlToFetch = `${weatherUrl}${apiKey}&query=${inputField.value}`
+	try{
+		const response =await fetch (urlToFetch);
+		if(response.ok){
+			const jsonResponse = await response.json();
+		}
+	}catch(err){console.log(err)}
   
 }
 

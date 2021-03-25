@@ -1,3 +1,8 @@
+const weekDays = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday" ];
+const destination = document.getElementById("destination");
+const venueDivs = document.getElementById("venues");
+const weatherDiv = document.getElementById("weather");
+
 
 const createWeatherHTML = (currentDay) => {
   console.log(currentDay)
@@ -6,15 +11,12 @@ const createWeatherHTML = (currentDay) => {
 		<h2>Temperature: ${currentDay.current.temperature}&deg;C</h2>
 		<h2>Condition: ${currentDay.current.weather_descriptions[0]}</h2>
     <img src="${currentDay.current.weather_icons[0]}">`;
-    $weatherDiv.append(weatherContent);
+    weatherDiv.innerHTML=weatherContent;
 }
 
 const kelvinToFahrenheit = k => ((k - 273.15) * 9 / 5 + 32).toFixed(0);
 
-
 const createVenuesHTML = (data) => {
-  const destination = document.getElementById("destination");
-  const venueDivs = document.getElementById("venues")
   
   destination.innerHTML =`<h2>${data[0].venue.location.city}</h2>`;
   data.forEach((item, index) => {
