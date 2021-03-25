@@ -13,8 +13,10 @@ const kelvinToFahrenheit = k => ((k - 273.15) * 9 / 5 + 32).toFixed(0);
 
 
 const createVenuesHTML = (data) => {
+  const destination = document.getElementById("destination");
+  const venueDivs = document.getElementById("venues")
   
-  $destination.append(`<h2>${data[0].venue.location.city}</h2>`);
+  destination.innerHTML =`<h2>${data[0].venue.location.city}</h2>`;
   data.forEach((item, index) => {
     const venueIcon = item.venue.categories[0].icon;
     const venueImgSrc = `${venueIcon.prefix}bg_64${venueIcon.suffix}`;
@@ -27,6 +29,6 @@ const createVenuesHTML = (data) => {
       <p>${item.venue.location.city}</p>
       <p>${item.venue.location.country}</p>
     </div>`;
-    $venueDivs.append(venueContent);
+    venueDivs.innerHTML=venueContent;
 });
 }
