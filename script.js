@@ -41,6 +41,7 @@ const getForecast = async () => {
 		const response =await fetch (urlToFetch);
 		if(response.ok){
 			const jsonResponse = await response.json();
+			return jsonResponse;
 		}
 	}catch(err){console.log(err)}
   

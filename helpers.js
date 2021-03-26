@@ -31,6 +31,6 @@ const createVenuesHTML = (data) => {
       <p>${item.venue.location.city}</p>
       <p>${item.venue.location.country}</p>
     </div>`;
-    venueDivs.innerHTML=venueContent;
+    venueDivs.appendChild(venueContent);
 });
 }
